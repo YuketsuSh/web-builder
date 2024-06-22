@@ -124,7 +124,7 @@ php artisan test
 
 ## Contributing
 
-Thank you for considering contributing to Project Name! Please read the [contribution guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Thank you for considering contributing to WebBuilder! Please read the [contribution guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
@@ -180,5 +180,38 @@ This project uses Spatie's Laravel Permission package for role and permission ma
    ```
 ---
 
+### Assign Admin Role
+
+After setting up the project and creating a user account, you need to assign the admin role to a user. Follow these steps:
+
+1. **Open Tinker:**
+
+   Laravel Tinker is a powerful REPL for the Laravel framework. Open Tinker by running:
+
+   ```bash
+   php artisan tinker
+   ```
+
+2. **Find the User:**
+
+   Find the user you want to assign the admin role to. Replace email@example.com with the user's email.
+
+   ```php
+   $user = App\Models\User::where('email', 'email@example.com')->first();
+   ```
+
+3. **Assign the Admin Role:**
+
+   Assign the `admin` role to the user. Ensure the role exists in your roles table. If it does not exist, you will need to create it first.
+
+   ```php
+   $user->assignRole('admin');
+   ```
+
+4. **Exit Tinker:**
+
+   Exit the Tinker console by typing `exit`.
+
+---
 Thank you for using my project ! If you have any questions or need further assistance, feel free to open an issue or contact me on [discord](https://discord.gg/w0nderland) or discord username (yuketsu).
 
