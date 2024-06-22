@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
@@ -26,5 +26,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/nav-items/{navItem}/edit', [NavItemController::class, 'edit'])->name('admin.nav-items.edit');
     Route::put('/admin/nav-items/{navItem}', [NavItemController::class, 'update'])->name('admin.nav-items.update');
     Route::delete('/admin/nav-items/{navItem}', [NavItemController::class, 'destroy'])->name('admin.nav-items.destroy');
-});
 
+    Route::get('/admin/footer', [FooterController::class, 'index'])->name('admin.footer.index');
+    Route::post('/admin/footer/{footer}', [FooterController::class, 'update'])->name('admin.footer.update');
+    Route::post('/admin/footer/social-media-link', [FooterController::class, 'storeSocialMediaLink'])->name('admin.footer.storeSocialMediaLink');
+    Route::delete('/admin/footer/social-media-link/{link}', [FooterController::class, 'destroySocialMediaLink'])->name('admin.footer.destroySocialMediaLink');
+    Route::post('/admin/footer/useful-link', [FooterController::class, 'storeUsefulLink'])->name('admin.footer.storeUsefulLink');
+    Route::delete('/admin/footer/useful-link/{link}', [FooterController::class, 'destroyUsefulLink'])->name('admin.footer.destroyUsefulLink');
+});

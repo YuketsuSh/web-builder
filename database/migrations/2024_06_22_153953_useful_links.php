@@ -9,24 +9,21 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('footers', function (Blueprint $table) {
+        Schema::create('useful_links', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->text('content')->nullable();
-            $table->string('logo')->nullable();
-            $table->text('description')->nullable();
+            $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('footers');
+        Schema::dropIfExists('useful_links');
     }
 };

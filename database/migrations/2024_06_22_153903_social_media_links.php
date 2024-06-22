@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('footers', function (Blueprint $table) {
+        Schema::create('social_media_links', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->text('content')->nullable();
-            $table->string('logo')->nullable();
-            $table->text('description')->nullable();
+            $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -25,8 +23,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('footers');
+        Schema::dropIfExists('social_media_links');
     }
 };

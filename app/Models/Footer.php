@@ -7,11 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Footer extends Model
 {
     protected $fillable = [
-        'title', 'content', 'social_media_links', 'useful_links', 'logo', 'description',
+        'logo', 'description',
     ];
 
-    protected $casts = [
-        'social_media_links' => 'array',
-        'useful_links' => 'array',
-    ];
+    public function socialMediaLinks()
+    {
+        return $this->hasMany(SocialMediaLink::class);
+    }
+
+    public function usefulLinks()
+    {
+        return $this->hasMany(UsefulLink::class);
+    }
+
 }
