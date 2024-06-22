@@ -1,0 +1,88 @@
+/* Container Styles */
+.page-container {
+    background-color: #1f2937;
+    border-radius: 0.375rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #f3f4f6;
+}
+
+/* Table Styles */
+.page-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.page-table th, .page-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #2d3748;
+    text-align: left;
+    color: #e2e8f0;
+}
+
+.page-table th {
+    background-color: #2d3748;
+    font-weight: 600;
+}
+
+.page-table tr:nth-child(even) {
+    background-color: #2a2e37;
+}
+
+.page-table tr:hover {
+    background-color: #3b434d;
+}
+
+/* Button Styles */
+.page-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.page-button:hover {
+    background-color: #4b5563;
+}
+
+.page-button.create {
+    background-color: #3b82f6;
+    color: #f3f4f6;
+}
+
+.page-button.show {
+    color: #3b82f6;
+}
+
+.page-button.edit {
+    color: #f59e0b;
+}
+
+.page-button.delete {
+    color: #ef4444;
+}
+
+/* Form Styles */
+.page-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.page-form input, .page-form textarea {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #4b5563;
+    background-color: #2d3748;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+}

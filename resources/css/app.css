@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark .bg-white {
+    @apply bg-gray-800;
+}
+
+.dark .text-gray-900 {
+    @apply text-gray-100;
+}
+
+.dark input, .dark textarea, .dark select {
+    @apply bg-gray-700 text-gray-100 border-gray-600 placeholder-gray-400;
+}
+
+.dark .form-label {
+    @apply text-gray-100;
+}
+
+.dark .form-input {
+    @apply bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400;
+}
+
+.dark .form-button {
+    @apply bg-gray-700 border-gray-600 text-gray-100 hover:bg-gray-600;
+}
+
+.dropdown-menu a {
+    color: #d1d5db;
+}
+
+.dropdown-menu a:hover {
+    color: #ffffff;
+    background-color: #1f2937;
+}
+
+.relative {
+    margin-top: 16px;
+}
+
